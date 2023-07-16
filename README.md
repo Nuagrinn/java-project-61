@@ -8,3 +8,17 @@ Even game
 Calc game  
 <img width="442" alt="image" src="https://github.com/Nuagrinn/java-project-61/assets/56113172/5b1fc81c-96d9-493f-aad4-33a822679098">
 
+GCD game  
+<img width="406" alt="image" src="https://github.com/Nuagrinn/java-project-61/assets/56113172/567f287d-8562-43b9-9fbd-5cd04a76a509">
+
+Progression game  
+<img width="489" alt="image" src="https://github.com/Nuagrinn/java-project-61/assets/56113172/8765dbb2-3314-494b-8585-4c03c6fb50db">
+
+Prime game  
+<img width="556" alt="image" src="https://github.com/Nuagrinn/java-project-61/assets/56113172/3305272b-f083-4864-9fd1-68e6fcf85160">
+
+Exit  
+<img width="377" alt="image" src="https://github.com/Nuagrinn/java-project-61/assets/56113172/ca5c3462-dd88-4c78-a44e-cc65c537ef58">
+
+Invalid game number  
+<img width="488" alt="image" src="https://github.com/Nuagrinn/java-project-61/assets/56113172/bf1cb786-57fa-42aa-b8fd-e7dec3a897e1">
