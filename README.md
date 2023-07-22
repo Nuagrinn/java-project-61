@@ -22,3 +22,5 @@ Exit
 
 Invalid game number  
 <img width="488" alt="image" src="https://github.com/Nuagrinn/java-project-61/assets/56113172/bf1cb786-57fa-42aa-b8fd-e7dec3a897e1">
+
+Все тесты пройдены
