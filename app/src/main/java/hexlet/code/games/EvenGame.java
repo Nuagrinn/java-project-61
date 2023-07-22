@@ -3,6 +3,8 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class EvenGame {
+    private static final int MIN_NUM = 1;
+    private static final int MAX_NUM = 100;
     public static void run() {
         Scanner scanner = new Scanner(System.in);
 
@@ -16,7 +18,7 @@ public class EvenGame {
         final int roundsToWin = 3;
 
         while (correctAnswers < roundsToWin) {
-            int number = generateRandomNumber(1, 100);
+            int number = generateRandomNumber(MIN_NUM, MAX_NUM);
             System.out.println("Question: " + number);
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();

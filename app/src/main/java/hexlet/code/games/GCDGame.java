@@ -3,6 +3,8 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class GCDGame {
+    private static final int MIN_NUM = 1;
+    private static final int MAX_NUM = 100;
     public static void run() {
         Scanner scanner = new Scanner(System.in);
 
@@ -38,7 +40,7 @@ public class GCDGame {
     }
 
     private static int generateRandomNumber() {
-        return 1 + (int) (Math.random() * (100 - 1 + 1));
+        return 1 + (int) (Math.random() * (MAX_NUM - MIN_NUM + 1));
     }
 
     private static int calculateGCD(int a, int b) {

@@ -11,6 +11,15 @@ import hexlet.code.games.GCDGame;
 import java.util.Scanner;
 
 public class App {
+    // Constants for game choices
+    private static final int GREET_CHOICE = 1;
+    private static final int EVEN_CHOICE = 2;
+    private static final int CALC_CHOICE = 3;
+    private static final int GCD_CHOICE = 4;
+    private static final int PROGRESSION_CHOICE = 5;
+    private static final int PRIME_CHOICE = 6;
+    private static final int EXIT_CHOICE = 0;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -26,25 +35,25 @@ public class App {
         int choice = scanner.nextInt();
 
         switch (choice) {
-            case 1:
+            case GREET_CHOICE:
                 Cli.run();
                 break;
-            case 2:
+            case EVEN_CHOICE:
                 EvenGame.run();
                 break;
-            case 3:
+            case CALC_CHOICE:
                 CalcGame.run();
                 break;
-            case 4:
+            case GCD_CHOICE:
                 GCDGame.run();
                 break;
-            case 5:
+            case PROGRESSION_CHOICE:
                 ProgressionGame.run();
                 break;
-            case 6:
+            case PRIME_CHOICE:
                 PrimeGame.run();
                 break;
-            case 0:
+            case EXIT_CHOICE:
                 System.out.println("Goodbye!");
                 break;
             default:

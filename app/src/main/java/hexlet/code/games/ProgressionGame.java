@@ -3,6 +3,14 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class ProgressionGame {
+    private static final int MIN_START_NUM = 1;
+    private static final int MAX_START_NUM = 20;
+    private static final int MIN_STEP = 1;
+    private static final int MAX_STEP = 10;
+    private static final int MIN_PROGRESSION_LENGTH = 5;
+    private static final int MAX_PROGRESSION_LENGTH = 10;
+    private static final int MISSING_NUMBER_PLACEHOLDER = -1;
+
     public static void run() {
         Scanner scanner = new Scanner(System.in);
 
@@ -16,18 +24,18 @@ public class ProgressionGame {
         final int roundsToWin = 3;
 
         while (correctAnswers < roundsToWin) {
-            int startNum = generateRandomNumber(1, 20);
-            int step = generateRandomNumber(1, 10);
-            int length = generateRandomNumber(5, 10);
+            int startNum = generateRandomNumber(MIN_START_NUM, MAX_START_NUM);
+            int step = generateRandomNumber(MIN_STEP, MAX_STEP);
+            int length = generateRandomNumber(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
             int missingIndex = generateRandomNumber(0, length - 1);
             int[] progression = generateArithmeticProgression(startNum, step, length);
 
             int missingNumber = progression[missingIndex];
-            progression[missingIndex] = -1;
+            progression[missingIndex] = MISSING_NUMBER_PLACEHOLDER;
 
             System.out.print("Question: ");
             for (int num : progression) {
-                if (num == -1) {
+                if (num == MISSING_NUMBER_PLACEHOLDER) {
                     System.out.print(".. ");
                 } else {
                     System.out.print(num + " ");

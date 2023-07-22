@@ -3,6 +3,8 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public  class CalcGame {
+    private static final int MIN_NUM = 1;
+    private static final int MAX_NUM = 100;
     public static void run() {
         Scanner scanner = new Scanner(System.in);
 
@@ -16,8 +18,8 @@ public  class CalcGame {
         final int roundsToWin = 3;
 
         while (correctAnswers < roundsToWin) {
-            int num1 = generateRandomNumber(1, 100);
-            int num2 = generateRandomNumber(1, 100);
+            int num1 = generateRandomNumber(MIN_NUM, MAX_NUM);
+            int num2 = generateRandomNumber(MIN_NUM, MAX_NUM);
             char operator = generateRandomOperator();
 
             int result = calculateExpression(num1, num2, operator);
