@@ -1,6 +1,13 @@
 package hexlet.code;
 
-import java.util.Random;
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.PrimeGame;
+import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.GCDGame;
+
+
+
 import java.util.Scanner;
 
 public class App {
@@ -15,33 +22,37 @@ public class App {
         System.out.println("5 - Progression");
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
-
         System.out.print("Your choice: ");
-        int gameNumber = Integer.parseInt(scanner.nextLine());
+        int choice = scanner.nextInt();
 
-        if (gameNumber == 1) {
-            Cli.run();
-        } else if (gameNumber == 2) {
-            Game evenGame = new EvenGame();
-            evenGame.play();
-        } else if (gameNumber == 3) {
-            Game calcGame = new CalcGame();
-            calcGame.play();
-        } else if (gameNumber == 4) {
-            Game gcdGame = new GCDGame();
-            gcdGame.play();
-        } else if (gameNumber == 5) {
-            Game progressionGame = new ProgressionGame();
-            progressionGame.play();
-        } else if (gameNumber == 6) {
-            Game primeGame = new PrimeGame();
-            primeGame.play();
-        } else if (gameNumber == 0) {
-            System.out.println("Exiting the program. Goodbye!");
-        } else {
-            System.out.println("Invalid game number. Exiting the program. Goodbye!");
+        switch (choice) {
+            case 1:
+                Cli.run();
+                break;
+            case 2:
+                EvenGame.run();
+                break;
+            case 3:
+                CalcGame.run();
+                break;
+            case 4:
+                GCDGame.run();
+                break;
+            case 5:
+                ProgressionGame.run();
+                break;
+            case 6:
+                PrimeGame.run();
+                break;
+            case 0:
+                System.out.println("Goodbye!");
+                break;
+            default:
+                System.out.println("Invalid choice. Goodbye!");
         }
-
-        scanner.close();
     }
 }
+
+
+
+
