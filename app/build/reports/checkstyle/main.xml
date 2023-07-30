@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="/Users/nuagrinn/IdeaProjects/java-project-61/app/src/main/java/hexlet/code/Cli.java">
+</file>
+<file name="/Users/nuagrinn/IdeaProjects/java-project-61/app/src/main/java/hexlet/code/App.java">
+</file>
+<file name="/Users/nuagrinn/IdeaProjects/java-project-61/app/src/main/java/hexlet/code/games/PrimeGame.java">
+</file>
+<file name="/Users/nuagrinn/IdeaProjects/java-project-61/app/src/main/java/hexlet/code/games/GCDGame.java">
+</file>
+<file name="/Users/nuagrinn/IdeaProjects/java-project-61/app/src/main/java/hexlet/code/games/ProgressionGame.java">
+</file>
+<file name="/Users/nuagrinn/IdeaProjects/java-project-61/app/src/main/java/hexlet/code/games/CalcGame.java">
+</file>
+<file name="/Users/nuagrinn/IdeaProjects/java-project-61/app/src/main/java/hexlet/code/games/EvenGame.java">
+</file>
+</checkstyle>
