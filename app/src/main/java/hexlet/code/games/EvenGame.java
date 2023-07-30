@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import static hexlet.code.GameRunner.getPlayerName;
 import static hexlet.code.GameRunner.runEvenGame;
-import static hexlet.code.GameRunner.congratulatePlayer;
 
 
 

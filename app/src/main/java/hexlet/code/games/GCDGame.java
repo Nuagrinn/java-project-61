@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 import static hexlet.code.GameRunner.getPlayerName;
 import static hexlet.code.GameRunner.runGCDGame;
-import static hexlet.code.GameRunner.congratulatePlayer;
-
 
 public class GCDGame {
 
