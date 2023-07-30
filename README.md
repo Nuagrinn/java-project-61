@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Nuagrinn/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/Nuagrinn/java-project-61/actions)
-<a href="https://codeclimate.com/github/Nuagrinn/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/953fae54b62330fbd0ff/maintainability" /></a>
+<a href="https://codeclimate.com/github/Nuagrinn/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/71bd6f8e87904e052049/maintainability" /></a>
 
 Even game  
 <img width="557" alt="image" src="https://github.com/Nuagrinn/java-project-61/assets/56113172/6e06a2b2-9dba-4eaf-ab1e-68533caafdcb">
@@ -22,3 +22,5 @@ Exit
 
 Invalid game number  
 <img width="488" alt="image" src="https://github.com/Nuagrinn/java-project-61/assets/56113172/bf1cb786-57fa-42aa-b8fd-e7dec3a897e1">
+
+Все тесты пройдены
