@@ -13,7 +13,6 @@ public class ProgressionGame {
         String name = getPlayerName(scanner);
 
         runProgressionGame(name, scanner);
-        congratulatePlayer(name);
 
     }
 

@@ -12,7 +12,6 @@ public class PrimeGame {
         String name = getPlayerName(scanner);
 
         runPrimeGame(name, scanner);
-        congratulatePlayer(name);
 
     }
 }

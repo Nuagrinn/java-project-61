@@ -15,7 +15,6 @@ public class EvenGame {
         String name = getPlayerName(scanner);
 
         runEvenGame(name, scanner);
-        congratulatePlayer(name);
 
     }
 

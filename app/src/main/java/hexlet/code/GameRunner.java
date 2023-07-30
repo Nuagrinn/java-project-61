@@ -47,6 +47,8 @@ public class GameRunner {
                 return;
             }
         }
+        congratulatePlayer(name);
+
     }
 
     public static void runCalcGame(String name, Scanner scanner) {
@@ -74,6 +76,8 @@ public class GameRunner {
                 return;
             }
         }
+        congratulatePlayer(name);
+
     }
 
     public static void runGCDGame(String name, Scanner scanner) {
@@ -99,6 +103,8 @@ public class GameRunner {
                 return;
             }
         }
+        congratulatePlayer(name);
+
     }
 
     public static void runProgressionGame(String name, Scanner scanner) {
@@ -138,6 +144,7 @@ public class GameRunner {
                 return;
             }
         }
+        congratulatePlayer(name);
 
     }
 
@@ -162,14 +169,18 @@ public class GameRunner {
                 informUserAboutWrongAnswer(userAnswer, correctAnswers, name);
                 return;
             }
+
         }
+        congratulatePlayer(name);
 
     }
 
     public static String getPlayerName(Scanner scanner) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        return scanner.nextLine();
+        String name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
+        return name;
     }
 
     public static void congratulatePlayer(String name) {

@@ -15,7 +15,6 @@ public  class CalcGame {
         String name = getPlayerName(scanner);
 
         runCalcGame(name, scanner);
-        congratulatePlayer(name);
 
     }
 }

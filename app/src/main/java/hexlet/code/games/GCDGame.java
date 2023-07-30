@@ -14,7 +14,6 @@ public class GCDGame {
         String name = getPlayerName(scanner);
 
         runGCDGame(name, scanner);
-        congratulatePlayer(name);
 
     }
 
