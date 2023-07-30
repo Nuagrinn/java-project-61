@@ -2,64 +2,20 @@ package hexlet.code.games;
 
 import java.util.Scanner;
 
+import static hexlet.code.GameRunner.getPlayerName;
+import static hexlet.code.GameRunner.runCalcGame;
+import static hexlet.code.GameRunner.congratulatePlayer;
+
+
+
 public  class CalcGame {
-    private static final int MIN_NUM = 1;
-    private static final int MAX_NUM = 100;
+
     public static void run() {
         Scanner scanner = new Scanner(System.in);
+        String name = getPlayerName(scanner);
 
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        String name = scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
-        System.out.println("What is the result of the expression?");
+        runCalcGame(name, scanner);
+        congratulatePlayer(name);
 
-        int correctAnswers = 0;
-        final int roundsToWin = 3;
-
-        while (correctAnswers < roundsToWin) {
-            int num1 = generateRandomNumber(MIN_NUM, MAX_NUM);
-            int num2 = generateRandomNumber(MIN_NUM, MAX_NUM);
-            char operator = generateRandomOperator();
-
-            int result = calculateExpression(num1, num2, operator);
-
-            System.out.println("Question: " + num1 + " " + operator + " " + num2);
-            System.out.print("Your answer: ");
-            int userAnswer = scanner.nextInt();
-
-            if (userAnswer == result) {
-                System.out.println("Correct!");
-                correctAnswers++;
-            } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + result + "'.");
-                System.out.println("Let's try again, " + name + "!");
-                return;
-            }
-        }
-
-        System.out.println("Congratulations, " + name + "!");
-    }
-
-    private static int generateRandomNumber(int min, int max) {
-        return min + (int) (Math.random() * (max - min + 1));
-    }
-
-    private static char generateRandomOperator() {
-        char[] operators = {'+', '-', '*'};
-        return operators[(int) (Math.random() * operators.length)];
-    }
-
-    private static int calculateExpression(int num1, int num2, char operator) {
-        switch (operator) {
-            case '+':
-                return num1 + num2;
-            case '-':
-                return num1 - num2;
-            case '*':
-                return num1 * num2;
-            default:
-                throw new IllegalArgumentException("Unknown operator: " + operator);
-        }
     }
 }

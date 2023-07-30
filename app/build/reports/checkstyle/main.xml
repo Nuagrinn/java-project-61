@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="9.3">
+<file name="/Users/nuagrinn/IdeaProjects/java-project-61/app/src/main/java/hexlet/code/Utils.java">
+</file>
 <file name="/Users/nuagrinn/IdeaProjects/java-project-61/app/src/main/java/hexlet/code/Cli.java">
+</file>
+<file name="/Users/nuagrinn/IdeaProjects/java-project-61/app/src/main/java/hexlet/code/GameRunner.java">
 </file>
 <file name="/Users/nuagrinn/IdeaProjects/java-project-61/app/src/main/java/hexlet/code/App.java">
 </file>
