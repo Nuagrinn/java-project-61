@@ -1,28 +1,19 @@
 package hexlet.code;
 
-import hexlet.code.games.EvenGame;
-import hexlet.code.games.CalcGame;
 import hexlet.code.games.PrimeGame;
-import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.EvenGame;
 import hexlet.code.games.GCDGame;
-
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.ProgressionGame;
 
 
 import java.util.Scanner;
 
+
 public class App {
-    // Constants for game choices
-    private static final int GREET_CHOICE = 1;
-    private static final int EVEN_CHOICE = 2;
-    private static final int CALC_CHOICE = 3;
-    private static final int GCD_CHOICE = 4;
-    private static final int PROGRESSION_CHOICE = 5;
-    private static final int PRIME_CHOICE = 6;
-    private static final int EXIT_CHOICE = 0;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
@@ -35,33 +26,29 @@ public class App {
         int choice = scanner.nextInt();
 
         switch (choice) {
-            case GREET_CHOICE:
+            case 1:
                 Cli.run();
                 break;
-            case EVEN_CHOICE:
-                EvenGame.run();
+            case 2:
+                EvenGame.startEvenGame(scanner);
                 break;
-            case CALC_CHOICE:
-                CalcGame.run();
+            case 3:
+                CalcGame.startCalcGame(scanner);
                 break;
-            case GCD_CHOICE:
-                GCDGame.run();
+            case 4:
+                GCDGame.startGCDGame(scanner);
                 break;
-            case PROGRESSION_CHOICE:
-                ProgressionGame.run();
+            case 5:
+                ProgressionGame.startProgressionGame(scanner);
                 break;
-            case PRIME_CHOICE:
-                PrimeGame.run();
-                break;
-            case EXIT_CHOICE:
+            case 6:
+                PrimeGame.startPrimeGame(scanner);
+            case 0:
                 System.out.println("Goodbye!");
                 break;
             default:
                 System.out.println("Invalid choice. Goodbye!");
         }
     }
+
 }
-
-
-
-

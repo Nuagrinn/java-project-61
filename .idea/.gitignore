@@ -7,5 +7,6 @@
 /dataSources/
 /dataSources.local.xml
 app/.gradle/
+app/build/
 
 
