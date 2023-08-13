@@ -13,13 +13,9 @@ public class PrimeGame {
     private static final int MAX_NUMBER = 100;
 
     public static void startPrimeGame(Scanner scanner) {
-        System.out.print("May I have your name? ");
-        scanner.nextLine();
-        String name = scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
         String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         QuestionAnswer[] questionsAndAnswers = generatePrimeQuestions();
-        GameRunner.playGame(scanner, name, rules, questionsAndAnswers);
+        GameRunner.playGame(scanner, rules, questionsAndAnswers);
     }
 
     private static QuestionAnswer[] generatePrimeQuestions() {

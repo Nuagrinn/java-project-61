@@ -13,13 +13,9 @@ public class EvenGame {
     private static final int MAX_NUMBER = 100;
 
     public static void startEvenGame(Scanner scanner) {
-        System.out.print("May I have your name? ");
-        scanner.nextLine();
-        String name = scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
         String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         QuestionAnswer[] questionsAndAnswers = generateEvenQuestions();
-        GameRunner.playGame(scanner, name, rules, questionsAndAnswers);
+        GameRunner.playGame(scanner, rules, questionsAndAnswers);
     }
 
     private static QuestionAnswer[] generateEvenQuestions() {

@@ -2,13 +2,13 @@ package hexlet.code;
 
 public class Utils {
 
-    public static class QuestionAnswer {
+    public static final class QuestionAnswer {
         private final String question;
         private final String answer;
 
-        public QuestionAnswer(String question, String answer) {
-            this.question = question;
-            this.answer = answer;
+        public QuestionAnswer(String questionParam, String answerParam) {
+            this.question = questionParam;
+            this.answer = answerParam;
         }
 
         public String getQuestion() {
@@ -19,6 +19,5 @@ public class Utils {
             return answer;
         }
     }
-
 
 }

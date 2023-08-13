@@ -13,13 +13,9 @@ public class CalcGame {
     private static final String[] OPERATORS = {"+", "-", "*"};
 
     public static void startCalcGame(Scanner scanner) {
-        System.out.print("May I have your name? ");
-        scanner.nextLine();
-        String name = scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
         String rules = "What is the result of the expression?";
         QuestionAnswer[] questionsAndAnswers = generateCalcQuestions();
-        GameRunner.playGame(scanner, name, rules, questionsAndAnswers);
+        GameRunner.playGame(scanner, rules, questionsAndAnswers);
     }
 
     private static QuestionAnswer[] generateCalcQuestions() {

@@ -12,38 +12,47 @@ import java.util.Scanner;
 
 public class App {
 
+    public static final int GAME_GREET = 1;
+    public static final int GAME_EVEN = 2;
+    public static final int GAME_CALC = 3;
+    public static final int GAME_GCD = 4;
+    public static final int GAME_PROGRESSION = 5;
+    public static final int GAME_PRIME = 6;
+    public static final int EXIT = 0;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet");
-        System.out.println("2 - Even");
-        System.out.println("3 - Calc");
-        System.out.println("4 - GCD");
-        System.out.println("5 - Progression");
-        System.out.println("6 - Prime");
-        System.out.println("0 - Exit");
+        System.out.println(GAME_GREET + " - Greet");
+        System.out.println(GAME_EVEN + " - Even");
+        System.out.println(GAME_CALC + " - Calc");
+        System.out.println(GAME_GCD + " - GCD");
+        System.out.println(GAME_PROGRESSION + " - Progression");
+        System.out.println(GAME_PRIME + " - Prime");
+        System.out.println(EXIT + " - Exit");
         System.out.print("Your choice: ");
         int choice = scanner.nextInt();
 
         switch (choice) {
-            case 1:
+            case GAME_GREET:
                 Cli.run();
                 break;
-            case 2:
+            case GAME_EVEN:
                 EvenGame.startEvenGame(scanner);
                 break;
-            case 3:
+            case GAME_CALC:
                 CalcGame.startCalcGame(scanner);
                 break;
-            case 4:
+            case GAME_GCD:
                 GCDGame.startGCDGame(scanner);
                 break;
-            case 5:
+            case GAME_PROGRESSION:
                 ProgressionGame.startProgressionGame(scanner);
                 break;
-            case 6:
+            case GAME_PRIME:
                 PrimeGame.startPrimeGame(scanner);
-            case 0:
+                break;
+            case EXIT:
                 System.out.println("Goodbye!");
                 break;
             default:

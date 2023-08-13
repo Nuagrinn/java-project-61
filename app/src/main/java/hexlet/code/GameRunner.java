@@ -9,7 +9,11 @@ public class GameRunner {
 
     public static final int NUMBER_OF_QUESTIONS = 3;
 
-    public static void playGame(Scanner scanner, String name, String rules, QuestionAnswer[] questionsAndAnswers) {
+    public static void playGame(Scanner scanner, String rules, QuestionAnswer[] questionsAndAnswers) {
+        System.out.print("May I have your name? ");
+        scanner.nextLine();
+        String name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
         System.out.println(rules);
         for (int i = 0; i < NUMBER_OF_QUESTIONS; i++) {
             String question = questionsAndAnswers[i].getQuestion();
@@ -30,4 +34,5 @@ public class GameRunner {
         }
         System.out.println("Congratulations, " + name + "!");
     }
+
 }

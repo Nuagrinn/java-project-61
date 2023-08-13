@@ -18,13 +18,9 @@ public class ProgressionGame {
     private static final int MAX_START = 100;
 
     public static void startProgressionGame(Scanner scanner) {
-        System.out.print("May I have your name? ");
-        scanner.nextLine();
-        String name = scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
         String rules = "What number is missing in the progression?";
         QuestionAnswer[] questionsAndAnswers = generateProgressionQuestions();
-        GameRunner.playGame(scanner, name, rules, questionsAndAnswers);
+        GameRunner.playGame(scanner, rules, questionsAndAnswers);
     }
 
     private static QuestionAnswer[] generateProgressionQuestions() {

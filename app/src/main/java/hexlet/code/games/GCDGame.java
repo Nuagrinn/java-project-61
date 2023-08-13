@@ -13,13 +13,9 @@ public class GCDGame {
     private static final int MAX_NUMBER = 100;
 
     public static void startGCDGame(Scanner scanner) {
-        System.out.print("May I have your name? ");
-        scanner.nextLine();
-        String name = scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
         String rules = "Find the greatest common divisor of given numbers.";
         QuestionAnswer[] questionsAndAnswers = generateGCDQuestions();
-        GameRunner.playGame(scanner, name, rules, questionsAndAnswers);
+        GameRunner.playGame(scanner, rules, questionsAndAnswers);
     }
 
     private static QuestionAnswer[] generateGCDQuestions() {
