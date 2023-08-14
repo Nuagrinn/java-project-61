@@ -32,6 +32,7 @@ public class GameRunner {
                 return;
             }
         }
+        scanner.close();
         System.out.println("Congratulations, " + name + "!");
     }
 
