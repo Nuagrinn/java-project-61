@@ -38,19 +38,19 @@ public class App {
                 Cli.run();
                 break;
             case GAME_EVEN:
-                EvenGame.startEvenGame(scanner);
+                EvenGame.startEvenGame();
                 break;
             case GAME_CALC:
-                CalcGame.startCalcGame(scanner);
+                CalcGame.startCalcGame();
                 break;
             case GAME_GCD:
-                GCDGame.startGCDGame(scanner);
+                GCDGame.startGCDGame();
                 break;
             case GAME_PROGRESSION:
-                ProgressionGame.startProgressionGame(scanner);
+                ProgressionGame.startProgressionGame();
                 break;
             case GAME_PRIME:
-                PrimeGame.startPrimeGame(scanner);
+                PrimeGame.startPrimeGame();
                 break;
             case EXIT:
                 System.out.println("Goodbye!");
@@ -58,6 +58,7 @@ public class App {
             default:
                 System.out.println("Invalid choice. Goodbye!");
         }
+        scanner.close();
     }
 
 }

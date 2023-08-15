@@ -1,33 +1,30 @@
 package hexlet.code.games;
 
-
-import java.util.Random;
-import java.util.Scanner;
-
 import hexlet.code.GameRunner;
-import hexlet.code.Utils.QuestionAnswer;
+
+import static hexlet.code.Utils.generateRandomInt;
 
 public class GCDGame {
 
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 100;
 
-    public static void startGCDGame(Scanner scanner) {
+    public static void startGCDGame() {
         String rules = "Find the greatest common divisor of given numbers.";
-        QuestionAnswer[] questionsAndAnswers = generateGCDQuestions();
-        GameRunner.playGame(scanner, rules, questionsAndAnswers);
+        String[][] questionsAndAnswers = generateGCDQuestions();
+        GameRunner.playGame(rules, questionsAndAnswers);
     }
 
-    private static QuestionAnswer[] generateGCDQuestions() {
-        Random rand = new Random();
-        QuestionAnswer[] questionsAndAnswers = new QuestionAnswer[GameRunner.NUMBER_OF_QUESTIONS];
+    private static String[][] generateGCDQuestions() {
+        String[][] questionsAndAnswers = new String[GameRunner.NUMBER_OF_QUESTIONS][2];
 
         for (int i = 0; i < GameRunner.NUMBER_OF_QUESTIONS; i++) {
-            int number1 = rand.nextInt(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER;
-            int number2 = rand.nextInt(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER;
+            int number1 = generateRandomInt(MIN_NUMBER, MAX_NUMBER);
+            int number2 = generateRandomInt(MIN_NUMBER, MAX_NUMBER);
             String question = number1 + " " + number2;
             String answer = String.valueOf(gcd(number1, number2));
-            questionsAndAnswers[i] = new QuestionAnswer(question, answer);
+            questionsAndAnswers[i][0] = question;
+            questionsAndAnswers[i][1] = answer;
         }
 
         return questionsAndAnswers;

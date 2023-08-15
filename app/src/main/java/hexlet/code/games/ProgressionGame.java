@@ -1,12 +1,8 @@
 package hexlet.code.games;
 
-
-import java.util.Random;
-import java.util.Scanner;
-
 import hexlet.code.GameRunner;
-import hexlet.code.Utils.QuestionAnswer;
 
+import static hexlet.code.Utils.generateRandomInt;
 
 public class ProgressionGame {
 
@@ -17,21 +13,20 @@ public class ProgressionGame {
     private static final int MIN_START = 1;
     private static final int MAX_START = 100;
 
-    public static void startProgressionGame(Scanner scanner) {
+    public static void startProgressionGame() {
         String rules = "What number is missing in the progression?";
-        QuestionAnswer[] questionsAndAnswers = generateProgressionQuestions();
-        GameRunner.playGame(scanner, rules, questionsAndAnswers);
+        String[][] questionsAndAnswers = generateProgressionQuestions();
+        GameRunner.playGame(rules, questionsAndAnswers);
     }
 
-    private static QuestionAnswer[] generateProgressionQuestions() {
-        Random rand = new Random();
-        QuestionAnswer[] questionsAndAnswers = new QuestionAnswer[GameRunner.NUMBER_OF_QUESTIONS];
+    private static String[][] generateProgressionQuestions() {
+        String[][] questionsAndAnswers = new String[GameRunner.NUMBER_OF_QUESTIONS][2];
 
         for (int i = 0; i < GameRunner.NUMBER_OF_QUESTIONS; i++) {
-            int length = rand.nextInt(MAX_LENGTH - MIN_LENGTH + 1) + MIN_LENGTH;
-            int difference = rand.nextInt(MAX_DIFFERENCE - MIN_DIFFERENCE + 1) + MIN_DIFFERENCE;
-            int start = rand.nextInt(MAX_START - MIN_START + 1) + MIN_START;
-            int hiddenIndex = rand.nextInt(length);
+            int length = generateRandomInt(MIN_LENGTH, MAX_LENGTH);
+            int difference =  generateRandomInt(MIN_DIFFERENCE, MAX_DIFFERENCE);
+            int start = generateRandomInt(MIN_START, MAX_START);
+            int hiddenIndex = generateRandomInt(length);
             StringBuilder question = new StringBuilder();
             String answer = "";
 
@@ -44,7 +39,8 @@ public class ProgressionGame {
                 }
             }
 
-            questionsAndAnswers[i] = new QuestionAnswer(question.toString().trim(), answer);
+            questionsAndAnswers[i][0] = question.toString().trim();
+            questionsAndAnswers[i][1] = answer;
         }
 
         return questionsAndAnswers;

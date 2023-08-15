@@ -1,6 +1,18 @@
 package hexlet.code;
 
+import java.util.Random;
+
 public class Utils {
+
+    private static Random rand = new Random();
+    public static int generateRandomInt(int bound) {
+        return rand.nextInt(bound);
+    }
+
+    public static int generateRandomInt(int min, int max) {
+        return rand.nextInt(max - min + 1) + min;
+    }
+
 
     public static final class QuestionAnswer {
         private final String question;

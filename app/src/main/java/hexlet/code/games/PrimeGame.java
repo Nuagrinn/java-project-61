@@ -1,32 +1,31 @@
 package hexlet.code.games;
 
-
 import java.util.Random;
-import java.util.Scanner;
-
 import hexlet.code.GameRunner;
-import hexlet.code.Utils.QuestionAnswer;
+
+import static hexlet.code.Utils.generateRandomInt;
 
 public class PrimeGame {
 
     private static final int MIN_NUMBER = 2;
     private static final int MAX_NUMBER = 100;
 
-    public static void startPrimeGame(Scanner scanner) {
+    public static void startPrimeGame() {
         String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        QuestionAnswer[] questionsAndAnswers = generatePrimeQuestions();
-        GameRunner.playGame(scanner, rules, questionsAndAnswers);
+        String[][] questionsAndAnswers = generatePrimeQuestions();
+        GameRunner.playGame(rules, questionsAndAnswers);
     }
 
-    private static QuestionAnswer[] generatePrimeQuestions() {
+    private static String[][] generatePrimeQuestions() {
         Random rand = new Random();
-        QuestionAnswer[] questionsAndAnswers = new QuestionAnswer[GameRunner.NUMBER_OF_QUESTIONS];
+        String[][] questionsAndAnswers = new String[GameRunner.NUMBER_OF_QUESTIONS][2];
 
         for (int i = 0; i < GameRunner.NUMBER_OF_QUESTIONS; i++) {
-            int number = rand.nextInt(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER;
+            int number = generateRandomInt(MIN_NUMBER, MAX_NUMBER);
             String question = String.valueOf(number);
             String answer = isPrime(number) ? "yes" : "no";
-            questionsAndAnswers[i] = new QuestionAnswer(question, answer);
+            questionsAndAnswers[i][0] = question;
+            questionsAndAnswers[i][1] = answer;
         }
 
         return questionsAndAnswers;
