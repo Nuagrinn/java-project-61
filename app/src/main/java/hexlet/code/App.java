@@ -53,7 +53,7 @@ public class App {
                 PrimeGame.startPrimeGame();
                 break;
             case EXIT:
-                System.out.println("Goodbye!");
+                System.out.println("Goodbye");
                 break;
             default:
                 System.out.println("Invalid choice. Goodbye!");
